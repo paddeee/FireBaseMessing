@@ -2,12 +2,15 @@
     "node": true,
     "browser": true,
     "esnext": true,
-    "bitwise": true,
     "camelcase": true,
     "curly": true,
+    "globals": {
+        "Firebase": false
+    },
     "eqeqeq": true,
     "immed": true,
     "indent": 4,
+    "latedef": true,
     "newcap": true,
     "noarg": true,
     "quotmark": "single",

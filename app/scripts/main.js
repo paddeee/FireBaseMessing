@@ -16,15 +16,19 @@
  *  limitations under the License
  *
  */
+
 'use strict';
 
-var myDataRef = new Firebase('https://incandescent-heat-3687.firebaseio.com/');
+(function() {
 
-document.querySelector('#messageInput').onkeypress = function (target) {
-    if (target.keyCode === 13) {
-        var name = document.querySelector('#nameInput').value;
-        var text = document.querySelector('#messageInput').value;
-        myDataRef.set('User ' + name + ' says ' + text);
-        document.querySelector('#messageInput').value = '';
-    }
-};
+    var myDataRef = new Firebase('https://incandescent-heat-3687.firebaseio.com/');
+
+    document.querySelector('#messageInput').onkeypress = function (target) {
+        if (target.keyCode === 13) {
+            var name = document.querySelector('#nameInput').value;
+            var text = document.querySelector('#messageInput').value;
+            myDataRef.set('User ' + name + ' says ' + text);
+            document.querySelector('#messageInput').value = '';
+        }
+    };
+})();
