@@ -39,17 +39,44 @@
 
         <!-- build:css styles/components/main.min.css -->
         <link rel="stylesheet" href="styles/h5bp.css">
-        <link rel="stylesheet" href="styles/components/components.css">
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
 
+        <script src='https://code.jquery.com/jquery-2.1.0.min.js'></script>
         <script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+        <script src="https://cdn.firebase.com/js/simple-login/1.6.4/firebase-simple-login.js"></script>
     </head>
     <body>
+    <div class="container">
+        <p id="error"></p>
+        <div id="login" class="view active">
+            <ul>
+                <li>
+                    <input id="txtEmail" class="input-box" type="text" placeholder="Email" />
+                </li>
+                <li>
+                    <input id="txtPass" class="input-box" type="password" placeholder="Password" />
+                </li>
+                <li>
+                    <label for="chkRegister">
+                        <input id="chkRegister" type="checkbox" value="Register" checked /> Register
+                    </label>
+                </li>
+                <li>
+                    <button id="btAction" class="btn">Register</button>
+                </li>
+            </ul>
+        </div>
 
-        <input type='text' id='nameInput' placeholder='Name'>
-        <input type='text' id='messageInput' placeholder='Message'>
+        <div id="userInfo" class="view">
+            <h4>Users</h4>
+            <button id="btLogout" class="btn">Logout</button>
+            <ul id="userList">
 
+            </ul>
+        </div>
+
+    </div>
         <!-- build:js scripts/main.min.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->

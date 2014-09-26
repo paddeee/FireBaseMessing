@@ -5,7 +5,9 @@
     "camelcase": true,
     "curly": true,
     "globals": {
-        "Firebase": false
+        "$": false,
+        "Firebase": false,
+        "FirebaseSimpleLogin": false
     },
     "eqeqeq": true,
     "immed": true,
